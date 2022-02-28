@@ -6,4 +6,8 @@ export const routes = [
         path: "/",
         component: Home
     },
+    {
+        path: "/conda/",
+        component: Home
+    },
 ];
