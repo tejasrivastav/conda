@@ -15,6 +15,7 @@ We define the possible option in the game and create a matrix for the scoring.
 
 Based on the user selections we evalute for each user aganist all the other selection.
 Assign a point if they win, remove one if they lose.
+![A vague representation](https://user-images.githubusercontent.com/13214721/155914440-639b69ab-f9ec-410b-af48-6789f8a4bb33.jpg)
 
 # Future:
 
