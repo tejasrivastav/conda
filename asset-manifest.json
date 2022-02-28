@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/conda/static/css/main.dd4a3bf4.css",
+    "main.js": "/conda/static/js/main.eea04298.js",
+    "static/js/787.04e34fb5.chunk.js": "/conda/static/js/787.04e34fb5.chunk.js",
+    "index.html": "/conda/index.html",
+    "main.dd4a3bf4.css.map": "/conda/static/css/main.dd4a3bf4.css.map",
+    "main.eea04298.js.map": "/conda/static/js/main.eea04298.js.map",
+    "787.04e34fb5.chunk.js.map": "/conda/static/js/787.04e34fb5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dd4a3bf4.css",
+    "static/js/main.eea04298.js"
+  ]
+}
