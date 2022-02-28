@@ -1,31 +1,41 @@
-import React from 'react';
-import logo from "../../logo.svg";
+import React, { useState } from 'react';
 import "./Home.css";
-import Topbar from "../../components/Topbar";
 import {Container} from "reactstrap";
+import Game from '../../components/Game';
 
 const Home = () => {
+    let [ player , setPlayer ] = useState({});
+    let [ start, setStart] = useState(false)
+    
     return (
         <React.Fragment>
             <Container>
-                <Topbar/>
-                <div className="App">
-                    <header className="App-header">
-                        <img src={logo} className="App-logo" alt="logo"/>
-                        <p>
-                            Edit
-                            <code>src/App.js</code>
-                            and save to reload.
-                        </p>
-                        <a
-                            className="App-link"
-                            href="https://reactjs.org"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Learn React
-                        </a>
-                    </header>
+                <div className="App container-fluid bg-light d-flex flex-column">
+                    <div className="row">
+                        <div className="col">
+                            <button type="button" className="btn btn-primary">Single Player</button>
+                        </div>
+                        <div className="col">
+                            <button type="button" className="btn btn-secondary" disabled>Multi Player</button>
+                        </div>
+                    </div>
+                    {!start ? 
+                        <div className="row" style={{
+                            "flex": 1,
+                            "alignItems": 'center'
+                        }}>
+                            <form>
+                                <div className="mb-3">
+                                    <label htmlFor="playerName" className="form-label">Player Name</label>
+                                    <input type="text" id="playerName" className="form-control"
+                                        value={player.name} onChange={(e)=>setPlayer({name: e.target.value, id: Math.random() })}/>
+                                </div>
+                                <div className="mb-3">
+                                    <button type="submit" className="btn btn-primary" onClick={()=>{setStart(true)}}>Start</button>
+                                </div>
+                            </form>
+                        </div>
+                    : <Game player={player} mode={1} /> }
                 </div>
             </Container>
         </React.Fragment>
